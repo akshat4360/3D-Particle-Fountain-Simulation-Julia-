@@ -1,6 +1,6 @@
 ## 🎬 Simulation Preview
 
-[▶️ Click here to watch the 3D Fluid Fountain Simulation Video](https://github.com/akshat4360/3D-Particle-Fountain-Simulation-Julia/blob/main/fluid_simulation.mp4)
+[▶️ Click here to watch the 3D Fluid Fountain Simulation Video](https://github.com/akshat4360/3D-Particle-Fountain-Simulation-Julia-/blob/main/fluid_simulation.mp4)
 
 
 
