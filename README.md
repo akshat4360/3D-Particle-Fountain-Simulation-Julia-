@@ -1,30 +1,41 @@
-##--RELATIVISTIC CYCLOTRON SIMULATOR--##
+## 🎬 Simulation Preview
 
-Welcome to my project! I build this to model and visualize the complex physics behind the particle acceleration
-in Cyclotron in the presence of the Magnetic Field(B) and the Voltage gap (V_gap). 
+[▶️ Click here to watch the 3D Fluid Fountain Simulation Video](https://github.com/akshat4360/3D-Particle-Fountain-Simulation-Julia/raw/blob/fluid_simulation.mp4)
 
-#Reason to build this simulation 
-As part of my Physics and Computational Studies, I wanted to see how relativistic effects alter the classical mechanics in Real-Time.
 
-## Core Physics I Modeled 
--- Einstien's Relativistic Mass Dilation: using the formula [ m = m0 / sqrt(1 - (v^2 / c^2)) ] to recalculate 
-  the particle's mass as respect to its increasing velocity at ever time step of [5 x 10^-11]--#assumed time interval.
-  
---Lorentz force & Orbit Radii: My code updates the spiral radius as the momentum changes, causing the 
-  path density to alter as velocity climbs.
-  
---Voltage Gap Transitions: I simulated an current electric field that accelerates the  proton precisely as it crosses the central gap.
 
-## Features & Visualization 
-I used "Julia" alongside "CairoMakie" to design a multi-panel layout dashboard that outputs:
-1. "The Trajectory Plot": A high-clarity visualization to show th expanding spiral path.
-2. "The Speed Profile": A curve mapping showing how high a particle gets to the speed of light.
-3. "Dynamic Mass Tracking": a graph showing the exponential curve of the mass dilation.
+# 🌊 3D Fluid Particle Fountain Simulation in Julia
 
-## My Tech stack
-- LANGUAGE: "Julia"
-- Libraries Used: CairoMakie, LinearAlgebra
+A real-time 3D fluid dynamics and particle fountain simulation built from scratch using **Julia** and **GLMakie**. This project models individual fluid parcels governed by gravity, Euler integration, and boundary collision physics, rendered interactively with dynamic scientific colormaps.
 
-----
-feel free to explore the code in 'Learn.jl'. 
-If you have any feedback or ideas on improving the simulation accuracy, Let me know!.
+---
+
+## ✨ Features
+* **Real-Time Physics Engine:** Implements velocity updates, downward gravitational acceleration, and energy-damped floor collisions.
+* **Particle Lifecycle & Recycling:** Automatically recycles particles as they age or drift away, creating a continuous, steady-state fluid stream.
+* **Interactive GLMakie Rendering:** Renders 1,000+ glowing particles in a 3D bounding box with real-time reactive observables (`Observable`) for smooth 60 FPS performance.
+* **Dynamic Color Mapping:** Utilizes the `:inferno` scientific colormap, binding particle color directly to their altitude ($Z$-coordinate) for a glowing liquid effect.
+
+---
+
+## 🛠️ Prerequisites & Installation
+
+Make sure you have [Julia](https://julialang.org/) installed on your system. 
+
+1. Open your Julia REPL or VS Code terminal.
+2. Install the required visualization package (`GLMakie`):
+   ```julia
+   using Pkg
+   Pkg.add("GLMakie")
+   Pkg.add("LinearAlgebra")
+🚀 Running the Simulation
+Clone or download this repository.
+Open the folder in VS Code or your preferred Julia environment.
+Run the script using:
+include("ParticleHydrodynamics.jl")
+🔬 Physics & Mathematics
+The simulation tracks particles in Lagrangian mechanics using discrete time steps (\Delta t):
+
+Velocity Update: \mathbf{v}_{\text{new}} = \mathbf{v}_{\text{old}} + \mathbf{g} \Delta t
+Position Update: \mathbf{x}_{\text{new}} = \mathbf{x}_{\text{old}} + \mathbf{v} \Delta t
+Floor Collision: Inverts vertical velocity upon hitting z \le 0 and applies a restitution damping coefficient to simulate energy loss on impact.
