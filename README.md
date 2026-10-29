@@ -36,6 +36,6 @@ include("ParticleHydrodynamics.jl")
 🔬 Physics & Mathematics
 The simulation tracks particles in Lagrangian mechanics using discrete time steps ($\Delta t$):
 
-Velocity Update: $$\mathbf{v}_$${\text{new}}$$ = $$\mathbf{v}_{\text{old}}$$ + $$\mathbf{g} \Delta t$$
-Position Update: $$\mathbf{x}_{\text{new}}$$ = $$\mathbf{x}_{\text{old}}$$ + $$\mathbf{v} \Delta t$$
+**Velocity Update**: $$\mathbf{v}_$${\text{new}}$$ = $$\mathbf{v}_{\text{old}}$$ + $$\mathbf{g} \Delta t$$
+**Position Update**: $$\mathbf{x}_{\text{new}}$$ = $$\mathbf{x}_{\text{old}}$$ + $$\mathbf{v} \Delta t$$
 Floor Collision: Inverts vertical velocity upon hitting $z \le 0 and applies a restitution damping coefficient to simulate energy loss on impact.
